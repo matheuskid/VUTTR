@@ -1,6 +1,6 @@
 module.exports = app => {
     const controller = require('../controllers/toolsController')();
   
-    app.route('/api/v1/vuttr')
+    app.route('/vuttr/tools')
       .get(controller.listTools);
   }
