@@ -39,6 +39,17 @@ module.exports = () => {
         res.status(201).json(results.rows[0]);
       });
     }
+
+    controller.deleteTool = (req, res) => {
+      pool.query('DELETE FROM tools WHERE id = $1;', 
+      [req.params.id],
+      (error, results) => {
+        if (error) {
+          throw error;
+        }
+        res.status(200).json(results.rows);
+      });
+    }
   
     return controller;
   }
