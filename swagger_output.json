@@ -29,7 +29,7 @@
         "tags": [
           "Tools"
         ],
-        "description": "Endpoint para obter as ferramentas",
+        "description": "Endpoint para obter as ferramentas.",
         "parameters": [
           {
             "name": "tag",
@@ -40,7 +40,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Ferramentas encontradas.",
+            "description": "Ferramenta(s) encontradas.",
             "schema": {
               "$ref": "#/definitions/Tools"
             }
@@ -65,28 +65,29 @@
         ],
         "responses": {
           "201": {
-            "description": "Created"
+            "description": "Ferramenta registrada com sucesso!"
           }
         }
       }
     },
     "/vuttr/tools/{id}": {
       "delete": {
-        "description": "",
+        "tags": [
+          "Tools"
+        ],
+        "description": "Endpoint para remover uma ferramenta",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "ID da ferramenta"
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "201": {
-            "description": "Ferramenta registrada com sucesso!"
+            "description": "Ferramenta removida."
           }
         }
       }
