@@ -12,10 +12,10 @@
 
 ## 📭Endpoints
 
-✔️ Buscar todas as ferramentas (<span style="color:green">GET</span>)[vuttr/tools]<br>
-✔️ Buscar ferramentas por tag (<span style="color:green">GET</span>)[vuttr/tools?tag=tagex]<br>
-✔️ Inserir ferramenta (<span style="color:yellow">POST</span>)[vuttr/tools]<br>
-✔️ Remover ferramenta (<span style="color:red">DELETE</span>)[vuttr/tools/:id]
+✔️ Buscar todas as ferramentas (GET)[vuttr/tools]<br>
+✔️ Buscar ferramentas por tag (GET)[vuttr/tools?tag=tagex]<br>
+✔️ Inserir ferramenta (POST)[vuttr/tools]<br>
+✔️ Remover ferramenta (DELETE)[vuttr/tools/:id]
 
 
 ## 🛠️Tecnologias
