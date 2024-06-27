@@ -24,7 +24,7 @@
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
-## 🧰Como instalar
+## 🧰 Instalação e configuração
 
 ✔️ É necessário instalar o Node.js(20.11) e Postgres(16.4).
 
@@ -65,3 +65,14 @@
     INSERT INTO tools (title, link, description, tags) VALUES ('json-server', 'https://github.com/typicode/json-server', 'Fake REST API based on a json schema. Useful for mocking and creating APIs for front-end devs to consume in coding challenges.', '{"api", "json", "schema", "node", "github", "rest"}');
     
     INSERT INTO tools (title, link, description, tags) VALUES ('fastify', 'https://www.fastify.io/', 'Extremely fast and simple, low-overhead web framework for NodeJS. Supports HTTP2.', '{"web", "framework", "node", "http2", "https", "localhost"}');
+
+✔️ Pronto, o banco está configurado.
+
+✔️ Abra o terminal na pasta raiz do projeto e rode:
+
+    npm install
+
+✔️ Finalmente para iniciar a aplicação, rode
+
+    npm start
+
