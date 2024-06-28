@@ -9,6 +9,8 @@
 * [Sobre](#sobre)
 * [Endpoints](#endpoints)
 * [Tecnologias](#️tecnologias)
+* [Instalação e configuração](#-instalação-e-configuração)
+* [Como usar](#-como-usar)
 
 ## 📭Endpoints
 
@@ -16,7 +18,6 @@
 ✔️ Buscar ferramentas por tag (GET)[vuttr/tools?tag=tagex]<br>
 ✔️ Inserir ferramenta (POST)[vuttr/tools]<br>
 ✔️ Remover ferramenta (DELETE)[vuttr/tools/:id]
-
 
 ## 🛠️Tecnologias
 
@@ -26,9 +27,9 @@
 
 ## 🧰 Instalação e configuração
 
-✔️ É necessário instalar o Node.js(20.11) e Postgres(16.4).
+✔️ É necessário instalar o Node.js(20.11) e Postgres(16.4);
 
-➡️ A instalação é padrão
+➡️ A instalação é padrão;
 
 ✔️ Após instalar o Postgres, abra o terminal(CMD) e digite os comandos:
 
@@ -43,7 +44,7 @@
     CREATE ROLE username WITH LOGIN PASSWORD 'password';
     ALTER ROLE username CREATEDB;
 
-❕ Você pode substituir "username" pelo qualquer coisa
+❕ Você pode substituir "username" pelo qualquer coisa;
 
 ➡️ Depois rode `\q` para desconectar
 
@@ -51,7 +52,7 @@
 
     psql -d postgres -U username
 
-✔️ Digite a senha "password". Ser der certo, aparecerá `postgres=>` na linha de comando.
+✔️ Digite a senha "password". Ser der certo, aparecerá `postgres=>` na linha de comando. Para criar o banco, rode:
 
     CREATE DATABASE vuttr;
     \c vuttr
@@ -68,11 +69,15 @@
 
 ✔️ Pronto, o banco está configurado.
 
-✔️ Abra o terminal na pasta raiz do projeto e rode:
+✔️ Abra o terminal na pasta raiz do projeto e execute:
 
     npm install
 
-✔️ Finalmente para iniciar a aplicação, rode
+✔️ Finalmente para iniciar a aplicação:
 
     npm start
+
+## 📌 Como usar
+
+✔️ A API está documentada com [Swagger](http://localhost:3000/doc), que pode ser acessado quando a API estiver rodando;
 
