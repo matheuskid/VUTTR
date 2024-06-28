@@ -2,7 +2,7 @@
 
 ## 🎯Sobre
 
-### API feita em Node.js utilizando Express e integração com PostgresDB
+### API feita em Node.js utilizando Express e integração com PostgresSQL
 
 ## 📌Sumário
 
