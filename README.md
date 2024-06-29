@@ -68,11 +68,11 @@
 
 ✔️ Pronto, o banco está configurado.
 
-✔️ Abra o terminal na pasta raiz do projeto e rode:
+✔️ Clone o projeto, depois abra o terminal na pasta raiz do projeto e rode:
 
     npm install
 
-✔️ Finalmente para iniciar a aplicação, rode
+✔️ Finalmente para iniciar a aplicação, rode:
 
     npm start
 
