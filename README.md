@@ -43,7 +43,7 @@
     CREATE ROLE username WITH LOGIN PASSWORD 'password';
     ALTER ROLE username CREATEDB;
 
-❕ Você pode substituir "username" pelo qualquer coisa
+❕ Você pode substituir "username" por qualquer coisa
 
 ➡️ Depois rode `\q` para desconectar
 
