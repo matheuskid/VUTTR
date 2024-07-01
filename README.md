@@ -80,3 +80,5 @@
 ## 📄 Documentação
 
 ✔️ A documentação da API está disponível em [Swagger](http://localhost:3000/doc/)
+
+(ver sobre containerização)
