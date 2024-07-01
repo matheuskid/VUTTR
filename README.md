@@ -77,3 +77,6 @@
 
     npm start
 
+## 📄 Documentação
+
+✔️ A documentação da API está disponível em [Swagger](localhost:3000/doc)
