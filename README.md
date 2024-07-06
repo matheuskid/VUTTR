@@ -2,15 +2,19 @@
 
 ## 🎯Sobre
 
-### API feita em Node.js utilizando Express e integração com PostgresDB
+### API feita em Node.js utilizando Express e integração com PostgresSQL
 
 ## 📌Sumário
 
 * [Sobre](#sobre)
 * [Endpoints](#endpoints)
 * [Tecnologias](#️tecnologias)
+<<<<<<< HEAD
 * [Instalação e configuração](#-instalação-e-configuração)
 * [Como usar](#-como-usar)
+=======
+* [Instalação e Configuração](#-instalação-e-configuração)
+>>>>>>> 0a5ecc6fae78fae4d0a6db3a377812c20d56c976
 
 ## 📭Endpoints
 
@@ -44,7 +48,11 @@
     CREATE ROLE username WITH LOGIN PASSWORD 'password';
     ALTER ROLE username CREATEDB;
 
+<<<<<<< HEAD
 ❕ Você pode substituir "username" pelo qualquer coisa;
+=======
+❕ Você pode substituir "username" por qualquer coisa
+>>>>>>> 0a5ecc6fae78fae4d0a6db3a377812c20d56c976
 
 ➡️ Depois rode `\q` para desconectar
 
@@ -69,6 +77,7 @@
 
 ✔️ Pronto, o banco está configurado.
 
+<<<<<<< HEAD
 ✔️ Abra o terminal na pasta raiz do projeto e execute:
 
     npm install
@@ -81,3 +90,16 @@
 
 ✔️ A API está documentada com [Swagger](http://localhost:3000/doc), que pode ser acessado quando a API estiver rodando;
 
+=======
+✔️ Clone o projeto, depois abra o terminal na pasta raiz do projeto e rode:
+
+    npm install
+
+✔️ Finalmente para iniciar a aplicação, rode:
+
+    npm start
+
+## 📄 Documentação
+
+✔️ A documentação da API está disponível em [Swagger](http://localhost:3000/doc/)
+>>>>>>> 0a5ecc6fae78fae4d0a6db3a377812c20d56c976
