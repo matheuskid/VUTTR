@@ -27,6 +27,8 @@
 
 ## 🧰 Instalação e configuração
 
+🎯 Necessário ter o Docker instalado.
+
 ✔️ Clone o projeto, depois abra o terminal na pasta raiz do projeto e rode:
 
     docker run --network my-network --name postgresDB -e POSTGRES_PASSWORD=postgres -v pgdata:/var/lib/postgresql/data -p 5433:5432 -d postgres:16.3
