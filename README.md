@@ -31,7 +31,7 @@
 
     docker run --network my-network --name postgresDB -e POSTGRES_PASSWORD=postgres -v pgdata:/var/lib/postgresql/data -p 5433:5432 -d postgres:16.3
 
-➡️ Baixa a imagem do postgres, cria o volume "pgdata" para armazenar os dados localmente e executa o container na porta 5433.
+➡️ Baixa a imagem do postgres, cria o volume "pgdata" para armazenar os dados localmente e executa o container na porta 5433;
 
 ❗ Se a porta 5433 já estiver sendo usada você pode trocar para outra.
 
@@ -39,7 +39,7 @@
 
     type backup.sql | docker exec -i postgresDB psql -U postgres
 
-➡️ Restaura o backup do servidor.
+➡️ Restaura o backup do servidor;
 
 ✔️ Na sequência, execute:
 
@@ -53,15 +53,15 @@
 
 ➡️ Sobe o container da aplicação;
 
-✔️ Com isso a aplicação já esta funcional com os dois containers criados e executando.
+📌 Com isso a aplicação já esta funcional com os dois containers criados e executando.
 
-📌 Para executar os containers futuramente, use:
+✔️ Para executar os containers futuramente, use:
 
-➡️ No powershell
+➡️ No powershell;
 
     docker start postgresDB; docker start vuttr
 
-➡️ No CMD
+➡️ No CMD;
 
     docker start postgresDB && docker start vuttr
 
