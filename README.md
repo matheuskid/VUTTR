@@ -14,7 +14,7 @@
 * [Como usar](#-como-usar)
 =======
 * [Instalação e Configuração](#-instalação-e-configuração)
->>>>>>> 0a5ecc6fae78fae4d0a6db3a377812c20d56c976
+* [Documentação](#-documentação)
 
 ## 📭Endpoints
 
@@ -31,60 +31,45 @@
 
 ## 🧰 Instalação e configuração
 
-✔️ É necessário instalar o Node.js(20.11) e Postgres(16.4);
+🎯 Necessário ter o Docker instalado.
 
-➡️ A instalação é padrão;
+✔️ Clone o projeto, depois abra o terminal na pasta raiz do projeto e rode:
 
-✔️ Após instalar o Postgres, abra o terminal(CMD) e digite os comandos:
+    docker run --network my-network --name postgresDB -e POSTGRES_PASSWORD=postgres -v pgdata:/var/lib/postgresql/data -p 5433:5432 -d postgres:16.3
 
-    psql -U postgres -h localhost
+➡️ Baixa a imagem do postgres, cria o volume "pgdata" para armazenar os dados localmente e executa o container na porta 5433;
 
-❗ Se o comando psql não for reconhecido, siga esse [tutorial](https://stackoverflow.com/a/68851621)
+❗ Se a porta 5433 já estiver sendo usada você pode trocar para outra.
 
-➡️ Digite a senha definida na instalação;
+✔️ Após o container subir, execute:
 
-✔️ Se "postgres=#" estiver aparencendo na linha de comando, rode os próximos comandos:
+    type backup.sql | docker exec -i postgresDB psql -U postgres
 
-    CREATE ROLE username WITH LOGIN PASSWORD 'password';
-    ALTER ROLE username CREATEDB;
+➡️ Restaura o backup do servidor;
 
-<<<<<<< HEAD
-❕ Você pode substituir "username" pelo qualquer coisa;
-=======
-❕ Você pode substituir "username" por qualquer coisa
->>>>>>> 0a5ecc6fae78fae4d0a6db3a377812c20d56c976
+✔️ Na sequência, execute:
 
-➡️ Depois rode `\q` para desconectar
+    docker build -t vuttr-1 .
 
-✔️ Após se desconectar:
+➡️ Cria a imagem da aplicação node por meio do dockerfile;
 
-    psql -d postgres -U username
+✔️ Por fim, execute:
 
-✔️ Digite a senha "password". Ser der certo, aparecerá `postgres=>` na linha de comando. Para criar o banco, rode:
+    docker run --network my-network --name vuttr -d -p 3000:3000 vuttr-1
 
-    CREATE DATABASE vuttr;
-    \c vuttr
+➡️ Sobe o container da aplicação;
 
-✔️ Estando conectado no banco, rode:
+📌 Com isso a aplicação já esta funcional com os dois containers criados e executando.
 
-    CREATE TABLE tools (id SERIAL PRIMARY KEY, title VARCHAR(30), link VARCHAR(80), description VARCHAR(150), tags VARCHAR(20)[]);
+✔️ Para executar os containers futuramente, use:
 
-    INSERT INTO tools (title, link, description, tags) VALUES ('Notion', 'https://notion.so', 'All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized.', '{"organization", "planning", "collaboration", "writing", "calendar"}');
+➡️ No powershell;
 
-    INSERT INTO tools (title, link, description, tags) VALUES ('json-server', 'https://github.com/typicode/json-server', 'Fake REST API based on a json schema. Useful for mocking and creating APIs for front-end devs to consume in coding challenges.', '{"api", "json", "schema", "node", "github", "rest"}');
-    
-    INSERT INTO tools (title, link, description, tags) VALUES ('fastify', 'https://www.fastify.io/', 'Extremely fast and simple, low-overhead web framework for NodeJS. Supports HTTP2.', '{"web", "framework", "node", "http2", "https", "localhost"}');
+    docker start postgresDB; docker start vuttr
 
-✔️ Pronto, o banco está configurado.
+➡️ No CMD;
 
-<<<<<<< HEAD
-✔️ Abra o terminal na pasta raiz do projeto e execute:
-
-    npm install
-
-✔️ Finalmente para iniciar a aplicação:
-
-    npm start
+    docker start postgresDB && docker start vuttr
 
 ## 📌 Como usar
 
@@ -93,13 +78,42 @@
 =======
 ✔️ Clone o projeto, depois abra o terminal na pasta raiz do projeto e rode:
 
-    npm install
+    docker run --network my-network --name postgresDB -e POSTGRES_PASSWORD=postgres -v pgdata:/var/lib/postgresql/data -p 5433:5432 -d postgres:16.3
 
-✔️ Finalmente para iniciar a aplicação, rode:
+➡️ Baixa a imagem do postgres, cria o volume "pgdata" para armazenar os dados localmente e executa o container na porta 5433;
 
-    npm start
+❗ Se a porta 5433 já estiver sendo usada você pode trocar para outra.
+
+✔️ Após o container subir, execute:
+
+    type backup.sql | docker exec -i postgresDB psql -U postgres
+
+➡️ Restaura o backup do servidor;
+
+✔️ Na sequência, execute:
+
+    docker build -t vuttr-1 .
+
+➡️ Cria a imagem da aplicação node por meio do dockerfile;
+
+✔️ Por fim, execute:
+
+    docker run --network my-network --name vuttr -d -p 3000:3000 vuttr-1
+
+➡️ Sobe o container da aplicação;
+
+📌 Com isso a aplicação já esta funcional com os dois containers criados e executando.
+
+✔️ Para executar os containers futuramente, use:
+
+➡️ No powershell;
+
+    docker start postgresDB; docker start vuttr
+
+➡️ No CMD;
+
+    docker start postgresDB && docker start vuttr
 
 ## 📄 Documentação
 
 ✔️ A documentação da API está disponível em [Swagger](http://localhost:3000/doc/)
->>>>>>> 0a5ecc6fae78fae4d0a6db3a377812c20d56c976
