@@ -31,6 +31,10 @@
 
 ✔️ Clone o projeto, depois abra o terminal na pasta raiz do projeto e rode:
 
+    docker network create my-network
+
+➡️ Cria a network que será utilizada para conectar os dois containers;
+
     docker run --network my-network --name postgresDB -e POSTGRES_PASSWORD=postgres -v pgdata:/var/lib/postgresql/data -p 5433:5432 -d postgres:16.3
 
 ➡️ Baixa a imagem do postgres, cria o volume "pgdata" para armazenar os dados localmente e executa o container na porta 5433;
